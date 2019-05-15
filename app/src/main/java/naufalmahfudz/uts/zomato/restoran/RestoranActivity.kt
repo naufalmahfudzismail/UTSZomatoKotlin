@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.view.View
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_restoran.*
 import naufalmahfudz.uts.zomato.R
 
@@ -16,6 +17,14 @@ class RestoranActivity : AppCompatActivity(), RestoranView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restoran)
+
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val image = intent.getStringExtra("image")
+
+        image.let {
+            Glide.with(this).load(it).asBitmap().into(imageHeader)
+        }
 
         restoranPresenter = RestoranPresenter(this, this)
         restoranPresenter.onFetchingData()

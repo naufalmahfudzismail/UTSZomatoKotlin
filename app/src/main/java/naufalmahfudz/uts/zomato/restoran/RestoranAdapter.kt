@@ -31,21 +31,23 @@ class RestoranAdapter(private val context: Context, private val data: List<Resto
 
         fun bindItems(context: Context, kategori: Restoran, position: Int) {
 
-            doAsync {
-
-                kategori.imageUrl.let {
-                    Glide.with(context).load(it).asBitmap().into(containerView.imageHeader2)
-                }
-
-                uiThread {
-                    containerView.text_nama_restaurant.text = kategori.nama
-                    containerView.text_harga.text = kategori.harga
-                    containerView.text_lokasi.text = kategori.lokasi
-                    containerView.setOnClickListener {
-                        context.startActivity(context.intentFor<RestoranDetailActivity>())
-                    }
-                }
+            kategori.imageUrl.let {
+                Glide.with(context).load(it).into(containerView.imageHeader2)
             }
+            containerView.text_nama_restaurant.text = kategori.nama
+            containerView.text_harga.text = kategori.harga
+            containerView.text_lokasi.text = kategori.lokasi
+            containerView.setOnClickListener {
+
+                context.startActivity(context.intentFor<RestoranDetailActivity>(
+                    "nama" to kategori.nama,
+                    "harga" to kategori.harga,
+                    "lokasi" to kategori.lokasi,
+                    "image" to kategori.imageUrl
+                ))
+
+            }
+
         }
     }
 }

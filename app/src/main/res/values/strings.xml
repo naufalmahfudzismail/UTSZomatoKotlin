@@ -63,4 +63,25 @@
         <item>https://b.zmtcdn.com/data/pictures/0/7402390/614dada8eddf511c376ac2989f6a5410.jpg</item>
     </string-array>
 
+    <string name="terpopuler_minggu_ini">Terpopuler Minggu Ini</string>
+    <string name="_8_outlet_disimpan_1232_kali">8 Outlet, Disimpan 1232 kali</string>
+    <string name="restoran_terpopuler_di_kotamu_minggu_ini">Restoran terpopuler di kotamu minggu ini</string>
+    <string name="sushi_tomi">Sushi Tomi</string>
+    <string name="_3_5">3.5</string>
+    <string name="mountain_view_mountain_view">Mountain View, Mountain View</string>
+    <string name="sushi_jepang">Sushi, Jepang</string>
+    <string name="_30_untuk_dua_approx">$30 untuk dua (approx.)</string>
+    <string name="specialty_s">Specialty\'s</string>
+    <string name="kafe_kafe_kue_roti"><![CDATA[KAFE - KAFE, KUE & ROTI]]></string>
+    <string name="_645_ellis_street_mountain_view_94043">645 Ellis Street, Mountain View 94043</string>
+    <string name="buka_besok_pada_5_30am">- Buka besok pada 5:30am</string>
+    <string name="koleksi_terpilih_20">Koleksi Terpilih (20)</string>
+    <string name="disimpan_0">Disimpan (0)</string>
+    <string name="milik_saya_0">Milik saya (0)</string>
+    <string name="arsip">Arsip</string>
+    <string name="pernah">Pernah</string>
+    <string name="bagi">Bagi</string>
+    <string name="add_review">Add Review</string>
+    <string name="rate_this_place">Rate this place:</string>
+
 </resources>

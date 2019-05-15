@@ -35,19 +35,22 @@ class KategoriAdapter(val context: Context, val data: List<Kategori>) :
     class ViewHolder(private val containerView: View) : RecyclerView.ViewHolder(containerView) {
 
         fun bindItems(context: Context, kategori: Kategori, position: Int) {
-            doAsync {
-                uiThread {
-                    containerView.text_judul.text = kategori.judul
-                    containerView.text_outlet.text = kategori.outlet
-                    containerView.text_deskripsi.text = kategori.deskripsi
+
+            containerView.text_judul.text = kategori.judul
+            containerView.text_outlet.text = kategori.outlet
+            containerView.text_deskripsi.text = kategori.deskripsi
+
+
+            kategori.imageURL.let {
+                Glide.with(context).load(it).into(containerView.imageHeader)
+
+
+                containerView.setOnClickListener {
+                    context.startActivity(context.intentFor<RestoranActivity>(
+                        "image" to kategori.imageURL
+                    ))
 
                 }
-                kategori.imageURL.let {
-                    Glide.with(context).load(it).asBitmap().into(containerView.imageHeader)
-                }
-            }
-            containerView.setOnClickListener {
-                context.startActivity(context.intentFor<RestoranActivity>())
             }
         }
     }

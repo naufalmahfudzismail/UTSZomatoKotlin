@@ -1,50 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<android.support.v7.widget.CardView
+        android:elevation="5dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:padding="8dp"
-        android:id="@+id/itemLayout">
+        android:layout_margin="10dp"
+        android:padding="8dp">
 
-    <ImageView
-            android:id="@+id/imageHeader"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="center"/>
-
-    <TextView
-            android:id="@+id/text_judul"
-            android:layout_marginLeft="8dp"
-            android:layout_width="wrap_content"
+    <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Terpopuler Minggu ini"
-            android:textSize="18sp"
-            android:layout_toRightOf="@+id/imageHeader"
-            android:textColor="@color/hitam"/>
-    <TextView
-            android:id="@+id/text_outlet"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8 Outlet"
-            android:textSize="14sp"
-            android:layout_toRightOf="@+id/imageHeader"
-            android:layout_below="@+id/text_judul" />
-    <TextView
-            android:id="@+id/text_deskripsi"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Restoran terpopuler di kotamu minggu ini"
-            android:textSize="14sp"
-            android:layout_toRightOf="@id/imageHeader"
-            android:layout_below="@+id/text_outlet"
-            android:textColor="@color/hitam"
-            android:maxLines="2"/>
+            android:id="@+id/itemLayout">
+
+        <ImageView
+                android:id="@+id/imageHeader"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="center"/>
+
+        <TextView
+                android:id="@+id/text_judul"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terpopuler Minggu ini"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/imageHeader"
+                android:textColor="@color/hitam"/>
+        <TextView
+                android:id="@+id/text_outlet"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 Outlet"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/imageHeader"
+                android:layout_below="@+id/text_judul"/>
+        <TextView
+                android:id="@+id/text_deskripsi"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restoran terpopuler di kotamu minggu ini"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/imageHeader"
+                android:layout_below="@+id/text_outlet"
+                android:textColor="@color/hitam"
+                android:maxLines="2"/>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
