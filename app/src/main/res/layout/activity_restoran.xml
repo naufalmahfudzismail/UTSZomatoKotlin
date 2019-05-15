@@ -1,0 +1,70 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".restoran.RestoranActivity"
+        android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+            android:layout_below="@id/imageHeader"
+            android:id="@+id/text_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:textAlignment="center"
+            android:text="Best Place for Buka Puasa"
+            android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:textAlignment="center"
+            android:layout_below="@id/text_judul"
+            android:id="@+id/text_outlet2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="36 Places"
+            android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:textAlignment="center"
+            android:layout_below="@id/text_outlet2"
+            android:id="@+id/text_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Gather around with your loved ones in these best places for buka puasa"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/text_deskripsi"
+            android:id="@+id/rcy_restoran"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            android:padding="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+</RelativeLayout>
