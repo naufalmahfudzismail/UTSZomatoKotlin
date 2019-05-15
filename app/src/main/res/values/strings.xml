@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UTS Zomato</string>
+    <string name="app_name">Zomato</string>
 
     <string-array name="judul">
         <item>Best Places for Buka Puasa </item>

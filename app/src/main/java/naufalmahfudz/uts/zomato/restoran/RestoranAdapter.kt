@@ -32,7 +32,7 @@ class RestoranAdapter(private val context: Context, private val data: List<Resto
         fun bindItems(context: Context, kategori: Restoran, position: Int) {
 
             kategori.imageUrl.let {
-                Glide.with(context).load(it).into(containerView.imageHeader2)
+                Glide.with(context).load(it).asBitmap().into(containerView.imageHeader2)
             }
             containerView.text_nama_restaurant.text = kategori.nama
             containerView.text_harga.text = kategori.harga

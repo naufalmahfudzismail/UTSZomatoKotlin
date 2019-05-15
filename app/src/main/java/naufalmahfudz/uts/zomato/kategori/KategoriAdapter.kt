@@ -42,15 +42,16 @@ class KategoriAdapter(val context: Context, val data: List<Kategori>) :
 
 
             kategori.imageURL.let {
-                Glide.with(context).load(it).into(containerView.imageHeader)
+                Glide.with(context).load(it).asBitmap().into(containerView.imageHeader)
+            }
 
-
-                containerView.setOnClickListener {
-                    context.startActivity(context.intentFor<RestoranActivity>(
+            containerView.setOnClickListener {
+                context.startActivity(
+                    context.intentFor<RestoranActivity>(
                         "image" to kategori.imageURL
-                    ))
+                    )
+                )
 
-                }
             }
         }
     }
